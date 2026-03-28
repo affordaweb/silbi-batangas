@@ -127,9 +127,9 @@ export default function ProgramsPage() {
       <main className="pt-17">
 
         {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-violet-950 via-violet-900 to-pink-900 text-white py-20 md:py-28">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-500 via-yellow-400 via-green-500 via-blue-500 to-violet-400" />
+        <section className="relative overflow-hidden bg-zinc-950 text-white py-20 md:py-28">
+          
+          
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-violet-300 mb-8">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -141,9 +141,9 @@ export default function ProgramsPage() {
                 <Heart className="w-4 h-4 fill-pink-400 text-pink-400" />
                 What We Do
               </div>
-              <h1 className="font-heading text-5xl sm:text-6xl font-extrabold leading-tight mb-6">
+              <h1 className="font-heading text-5xl sm:text-6xl font-bold leading-tight mb-6">
                 Programs &{' '}
-                <span className="bg-gradient-to-r from-pink-400 to-amber-400 bg-clip-text text-transparent">
+                <span className="text-violet-300">
                   Services
                 </span>
               </h1>
@@ -196,11 +196,11 @@ export default function ProgramsPage() {
         {/* CTA / Need Help */}
         <section className="py-16 bg-zinc-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl bg-gradient-to-br from-violet-600 to-pink-600 text-white p-10 md:p-14 text-center relative overflow-hidden">
+            <div className="rounded-3xl bg-violet-700 text-white p-10 md:p-14 text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-white/10 rounded-full blur-[80px]" />
               <div className="relative">
                 <Phone className="w-12 h-12 text-white mx-auto mb-5 opacity-90" />
-                <h2 className="font-heading text-3xl md:text-4xl font-extrabold mb-4">Need Help or Support?</h2>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-4">Need Help or Support?</h2>
                 <p className="text-violet-100 text-lg leading-relaxed mb-8 max-w-xl mx-auto">
                   Reach out to us directly. Our team is here to listen, assist, and connect you to the right program or resource.
                 </p>

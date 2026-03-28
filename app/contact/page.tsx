@@ -51,9 +51,9 @@ export default function ContactPage() {
       <main className="pt-17">
 
         {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-violet-950 via-violet-900 to-pink-900 text-white py-20 md:py-28">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-500 via-yellow-400 via-green-500 via-blue-500 to-violet-400" />
+        <section className="relative overflow-hidden bg-zinc-950 text-white py-20 md:py-28">
+          
+          
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-violet-300 mb-8">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -65,9 +65,9 @@ export default function ContactPage() {
                 <Heart className="w-4 h-4 fill-pink-400 text-pink-400" />
                 We&apos;re Here for You
               </div>
-              <h1 className="font-heading text-5xl sm:text-6xl font-extrabold leading-tight mb-6">
+              <h1 className="font-heading text-5xl sm:text-6xl font-bold leading-tight mb-6">
                 Get in{' '}
-                <span className="bg-gradient-to-r from-pink-400 to-amber-400 bg-clip-text text-transparent">
+                <span className="text-violet-300">
                   Touch
                 </span>
               </h1>
@@ -85,7 +85,7 @@ export default function ContactPage() {
 
               {/* Left: info + trust */}
               <div>
-                <h2 className="font-heading text-3xl font-extrabold text-zinc-900 mb-3">
+                <h2 className="font-heading text-3xl font-bold text-zinc-900 mb-3">
                   Reach Out to SILBI
                 </h2>
                 <p className="text-zinc-500 leading-relaxed mb-8">
@@ -110,7 +110,7 @@ export default function ContactPage() {
                 </div>
 
                 {/* Safe space notice */}
-                <div className="p-6 rounded-2xl bg-gradient-to-br from-violet-600 to-pink-600 text-white">
+                <div className="p-6 rounded-2xl bg-violet-700 text-white">
                   <Heart className="w-7 h-7 fill-white text-white mb-3" />
                   <h3 className="font-heading text-lg font-bold mb-2">A Safe Space for Everyone</h3>
                   <p className="text-violet-100 text-sm leading-relaxed">
@@ -121,7 +121,7 @@ export default function ContactPage() {
 
               {/* Right: form */}
               <div className="bg-white rounded-3xl border border-zinc-100 p-8 shadow-xl shadow-violet-100/30">
-                <h3 className="font-heading text-2xl font-extrabold text-zinc-900 mb-2">Send Us a Message</h3>
+                <h3 className="font-heading text-2xl font-bold text-zinc-900 mb-2">Send Us a Message</h3>
                 <p className="text-zinc-500 text-sm mb-8">Fill out the form below and our team will respond as soon as possible.</p>
                 <ContactForm />
               </div>

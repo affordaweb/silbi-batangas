@@ -1,17 +1,17 @@
 import type { Metadata } from 'next'
-import { Syne, Plus_Jakarta_Sans } from 'next/font/google'
+import { Inter, DM_Serif_Display } from 'next/font/google'
 import './globals.css'
 
-const syne = Syne({
+const inter = Inter({
   subsets: ['latin'],
-  variable: '--font-syne',
-  weight: ['400', '600', '700', '800'],
+  variable: '--font-inter',
 })
 
-const plusJakarta = Plus_Jakarta_Sans({
+const dmSerif = DM_Serif_Display({
   subsets: ['latin'],
-  variable: '--font-plus-jakarta',
-  weight: ['400', '500', '600', '700'],
+  variable: '--font-dm-serif',
+  weight: ['400'],
+  style: ['normal', 'italic'],
 })
 
 const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://silbi-batangas.vercel.app'
@@ -79,7 +79,7 @@ const organizationSchema = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en-PH" className={`${syne.variable} ${plusJakarta.variable} h-full`}>
+    <html lang="en-PH" className={`${inter.variable} ${dmSerif.variable} h-full`}>
       <head>
         <meta name="theme-color" content="#7c3aed" />
         <meta name="color-scheme" content="light" />

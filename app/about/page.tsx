@@ -44,9 +44,9 @@ export default function AboutPage() {
       <main className="pt-17">
 
         {/* Hero */}
-        <section className="relative overflow-hidden bg-gradient-to-br from-violet-950 via-violet-900 to-pink-900 text-white py-24 md:py-32">
-          <div className="absolute top-0 right-0 w-[400px] h-[400px] bg-pink-500/20 rounded-full blur-[100px] pointer-events-none" />
-          <div className="absolute top-0 left-0 right-0 h-1.5 bg-gradient-to-r from-red-500 via-yellow-400 via-green-500 via-blue-500 to-violet-400" />
+        <section className="relative overflow-hidden bg-zinc-950 text-white py-24 md:py-32">
+          
+          
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <nav className="flex items-center gap-2 text-sm text-violet-300 mb-8">
               <Link href="/" className="hover:text-white transition-colors">Home</Link>
@@ -58,9 +58,9 @@ export default function AboutPage() {
                 <Heart className="w-4 h-4 fill-pink-400 text-pink-400" />
                 Our Story
               </div>
-              <h1 className="font-heading text-5xl sm:text-6xl font-extrabold leading-tight mb-6">
+              <h1 className="font-heading text-5xl sm:text-6xl font-bold leading-tight mb-6">
                 20+ Years of{' '}
-                <span className="bg-gradient-to-r from-pink-400 to-amber-400 bg-clip-text text-transparent">
+                <span className="text-violet-300">
                   Pride & Service
                 </span>
               </h1>
@@ -79,7 +79,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-5">
                   <Heart className="w-6 h-6 fill-white text-white" />
                 </div>
-                <h2 className="font-heading text-2xl font-extrabold mb-4">Our Mission</h2>
+                <h2 className="font-heading text-2xl font-bold mb-4">Our Mission</h2>
                 <p className="text-violet-100 leading-relaxed">
                   To empower and uplift the LGBTQIA+ community of Batangas City through inclusive programs, HIV advocacy, rights protection, and community service — ensuring that no one is left behind.
                 </p>
@@ -88,7 +88,7 @@ export default function AboutPage() {
                 <div className="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center mb-5">
                   <Star className="w-6 h-6 fill-white text-white" />
                 </div>
-                <h2 className="font-heading text-2xl font-extrabold mb-4">Our Vision</h2>
+                <h2 className="font-heading text-2xl font-bold mb-4">Our Vision</h2>
                 <p className="text-rose-100 leading-relaxed">
                   A Batangas City where every LGBTQIA+ individual lives freely, safely, and with full recognition of their rights — a community where pride is celebrated, health is protected, and love is love.
                 </p>
@@ -101,7 +101,7 @@ export default function AboutPage() {
         <section className="py-20 bg-zinc-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
-              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-zinc-900 mb-4">Our Journey</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-zinc-900 mb-4">Our Journey</h2>
               <p className="text-zinc-500 max-w-2xl mx-auto">From a small community group to a recognized LGBTQIA+ organization — here are the milestones that shaped SILBI.</p>
             </div>
             <div className="relative">
@@ -110,7 +110,7 @@ export default function AboutPage() {
                 {milestones.map((m, i) => (
                   <div key={i} className="relative flex gap-8">
                     <div className="flex-shrink-0 w-16 flex flex-col items-center">
-                      <div className="w-4 h-4 rounded-full bg-gradient-to-br from-violet-600 to-pink-500 border-2 border-white shadow-md z-10 mt-1" />
+                      <div className="w-4 h-4 rounded-full bg-violet-700 border-2 border-white shadow-md z-10 mt-1" />
                     </div>
                     <div className="flex-1 pb-4">
                       <span className="text-xs font-bold text-violet-600 uppercase tracking-widest">{m.year}</span>
@@ -127,14 +127,14 @@ export default function AboutPage() {
         {/* Ordinance spotlight */}
         <section className="py-16 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl bg-gradient-to-br from-violet-600 to-pink-600 text-white p-10 md:p-14 relative overflow-hidden">
+            <div className="rounded-3xl bg-violet-700 text-white p-10 md:p-14 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-white/10 rounded-full blur-[80px]" />
               <div className="relative max-w-2xl">
                 <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/20 text-white text-sm font-semibold mb-6">
                   <Shield className="w-4 h-4" />
                   Legislative Victory
                 </div>
-                <h2 className="font-heading text-3xl md:text-4xl font-extrabold mb-5">Ordinance No. 12</h2>
+                <h2 className="font-heading text-3xl md:text-4xl font-bold mb-5">Ordinance No. 12</h2>
                 <p className="text-violet-100 text-lg leading-relaxed mb-6">
                   The Batangas City Anti-Discrimination Ordinance — championed with the advocacy of SILBI — protects LGBTQIA+ residents from discrimination in employment, housing, education, and public services across Batangas City.
                 </p>
@@ -155,7 +155,7 @@ export default function AboutPage() {
         <section className="py-20 bg-zinc-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
-              <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-zinc-900 mb-4">Our Values</h2>
+              <h2 className="font-heading text-3xl sm:text-4xl font-bold text-zinc-900 mb-4">Our Values</h2>
               <p className="text-zinc-500 max-w-xl mx-auto">The principles that guide everything we do.</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -178,7 +178,7 @@ export default function AboutPage() {
         {/* CTA */}
         <section className="py-16 bg-white">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-heading text-3xl sm:text-4xl font-extrabold text-zinc-900 mb-5">Join Our Community</h2>
+            <h2 className="font-heading text-3xl sm:text-4xl font-bold text-zinc-900 mb-5">Join Our Community</h2>
             <p className="text-zinc-500 text-lg mb-8 max-w-xl mx-auto">
               Whether you need support, want to volunteer, or wish to learn more — we welcome you.
             </p>

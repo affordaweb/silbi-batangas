@@ -1,26 +1,37 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-silbi-violet: #7c3aed;
+  --color-silbi-violet-dark: #5b21b6;
+  --color-silbi-violet-light: #ede9fe;
+  --color-silbi-rose: #db2777;
+  --color-silbi-rose-dark: #9d174d;
+  --color-silbi-rose-light: #fce7f3;
+  --color-silbi-amber: #d97706;
+  --color-silbi-amber-light: #fef3c7;
+  --color-silbi-sky: #0284c7;
+  --color-silbi-emerald: #059669;
+
+  --font-heading: var(--font-syne);
+  --font-body: var(--font-plus-jakarta);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+html {
+  scroll-behavior: smooth;
+  -webkit-text-size-adjust: 100%;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
+  font-family: var(--font-body), system-ui, sans-serif;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

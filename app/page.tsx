@@ -80,8 +80,8 @@ export default function HomePage() {
       <main className="pt-16">
 
         {/* Hero */}
-        <section className="bg-zinc-950 text-white py-28 md:py-36 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--tw-gradient-stops))] from-violet-900/30 via-transparent to-transparent pointer-events-none" />
+        <section className="bg-violet-900 text-white py-28 md:py-36 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-violet-700/40 via-transparent to-transparent pointer-events-none" />
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
               <div>
@@ -110,8 +110,8 @@ export default function HomePage() {
                 </div>
                 <div className="mt-10 flex flex-wrap gap-5">
                   {['20+ Years', 'HIV Advocacy', 'Community-Run'].map((t) => (
-                    <div key={t} className="flex items-center gap-1.5 text-sm text-zinc-500">
-                      <CheckCircle className="w-4 h-4 text-violet-500" />
+                    <div key={t} className="flex items-center gap-1.5 text-sm text-violet-300">
+                      <CheckCircle className="w-4 h-4 text-violet-400" />
                       {t}
                     </div>
                   ))}
@@ -121,9 +121,9 @@ export default function HomePage() {
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4">
                 {stats.map((stat) => (
-                  <div key={stat.label} className="p-7 rounded-xl bg-zinc-900 border border-zinc-800">
+                  <div key={stat.label} className="p-7 rounded-xl bg-violet-800/60 border border-violet-700/50 backdrop-blur-sm">
                     <div className="font-heading text-4xl text-white mb-2">{stat.value}</div>
-                    <div className="text-sm text-zinc-500">{stat.label}</div>
+                    <div className="text-sm text-violet-300">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -159,12 +159,12 @@ export default function HomePage() {
                   <div className="font-heading text-3xl mb-2">Ordinance No. 12</div>
                   <div className="text-violet-200 text-sm leading-relaxed">Batangas City Anti-Discrimination Ordinance — a landmark victory for LGBTQIA+ rights in the province, protecting residents from discrimination in employment, housing, and public services.</div>
                 </div>
-                <div className="p-5 rounded-xl bg-zinc-50 border border-zinc-100">
+                <div className="p-5 rounded-xl bg-violet-50 border border-violet-100">
                   <Ribbon className="w-6 h-6 text-violet-600 mb-3" />
                   <div className="font-semibold text-zinc-900 text-sm">HIV Advocacy</div>
                   <div className="text-xs text-zinc-500 mt-1">Testing, counseling & prevention</div>
                 </div>
-                <div className="p-5 rounded-xl bg-zinc-50 border border-zinc-100">
+                <div className="p-5 rounded-xl bg-violet-50 border border-violet-100">
                   <Megaphone className="w-6 h-6 text-violet-600 mb-3" />
                   <div className="font-semibold text-zinc-900 text-sm">Community Voice</div>
                   <div className="text-xs text-zinc-500 mt-1">Rights protection & advocacy</div>
@@ -175,7 +175,7 @@ export default function HomePage() {
         </section>
 
         {/* Programs */}
-        <section className="py-20 bg-zinc-50">
+        <section className="py-20 bg-violet-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="mb-12">
               <p className="text-violet-600 text-sm font-medium uppercase tracking-widest mb-3">What We Do</p>
@@ -188,7 +188,7 @@ export default function HomePage() {
                 return (
                   <div
                     key={program.title}
-                    className="p-7 rounded-xl border border-zinc-200 bg-white hover:border-violet-200 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+                    className="p-7 rounded-xl border border-violet-100 bg-white hover:border-violet-300 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
                   >
                     <Icon className="w-6 h-6 text-violet-600 mb-4" />
                     <h3 className="font-semibold text-zinc-900 text-lg mb-2">{program.title}</h3>

@@ -127,7 +127,7 @@ export default function ProgramsPage() {
       <main className="pt-17">
 
         {/* Hero */}
-        <section className="relative overflow-hidden bg-zinc-950 text-white py-20 md:py-28">
+        <section className="relative overflow-hidden bg-violet-900 text-white py-20 md:py-28">
           
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -194,7 +194,7 @@ export default function ProgramsPage() {
         </section>
 
         {/* CTA / Need Help */}
-        <section className="py-16 bg-zinc-50">
+        <section className="py-16 bg-violet-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="rounded-3xl bg-violet-700 text-white p-10 md:p-14 text-center relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-white/10 rounded-full blur-[80px]" />

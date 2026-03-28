@@ -44,7 +44,7 @@ export default function AboutPage() {
       <main className="pt-17">
 
         {/* Hero */}
-        <section className="relative overflow-hidden bg-zinc-950 text-white py-24 md:py-32">
+        <section className="relative overflow-hidden bg-violet-900 text-white py-24 md:py-32">
           
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,7 +98,7 @@ export default function AboutPage() {
         </section>
 
         {/* History / Timeline */}
-        <section className="py-20 bg-zinc-50">
+        <section className="py-20 bg-violet-50">
           <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-14">
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-zinc-900 mb-4">Our Journey</h2>
@@ -152,7 +152,7 @@ export default function AboutPage() {
         </section>
 
         {/* Values */}
-        <section className="py-20 bg-zinc-50">
+        <section className="py-20 bg-violet-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
               <h2 className="font-heading text-3xl sm:text-4xl font-bold text-zinc-900 mb-4">Our Values</h2>

@@ -51,7 +51,7 @@ export default function ContactPage() {
       <main className="pt-17">
 
         {/* Hero */}
-        <section className="relative overflow-hidden bg-zinc-950 text-white py-20 md:py-28">
+        <section className="relative overflow-hidden bg-violet-900 text-white py-20 md:py-28">
           
           
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -96,7 +96,7 @@ export default function ContactPage() {
                   {contactInfo.map((item) => {
                     const Icon = item.icon
                     return (
-                      <div key={item.title} className="flex items-start gap-4 p-4 rounded-2xl bg-zinc-50 border border-zinc-100">
+                      <div key={item.title} className="flex items-start gap-4 p-4 rounded-2xl bg-violet-50 border border-violet-100">
                         <div className="w-10 h-10 rounded-xl bg-violet-100 flex items-center justify-center flex-shrink-0">
                           <Icon className="w-5 h-5 text-violet-600" />
                         </div>

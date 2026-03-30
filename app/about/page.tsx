@@ -136,8 +136,8 @@ export default function AboutPage() {
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
               <div className="p-7 rounded-2xl bg-violet-700 text-white">
                 <div className="text-xs font-semibold uppercase tracking-widest text-violet-300 mb-1">Current President</div>
-                <div className="font-heading text-2xl text-white mb-1">Loubrix Bay</div>
-                <p className="text-violet-200 text-sm leading-relaxed">Leads SILBI Batangas City since at least 2024, overseeing the organization's programs, advocacy, and the historic first Pride Month celebration in Batangas City in June 2025.</p>
+                <div className="font-heading text-2xl text-white mb-1">Jordan Luna Magtibay</div>
+                <p className="text-violet-200 text-sm leading-relaxed">The newly elected president of LGBTQIA-SILBI Batangas City Inc., leading the organization's programs, advocacy, and community service for the community of Batangas City.</p>
               </div>
               <div className="p-7 rounded-2xl bg-violet-50 border border-violet-100">
                 <div className="text-xs font-semibold uppercase tracking-widest text-violet-500 mb-1">Founding President</div>

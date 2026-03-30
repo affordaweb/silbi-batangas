@@ -6,7 +6,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: { absolute: 'About SILBI Batangas City — Our Story, Mission & Vision' },
-  description: 'Learn about LGBTQIA-SILBI Batangas City Inc. — our history, mission, vision, and the programs that have empowered the LGBTQIA+ community of Batangas City for over 20 years.',
+  description: 'Learn about LGBTQIA-SILBI Batangas City Inc. — our history since 2015, mission, vision, leadership, and the programs empowering the LGBTQIA+ community of Batangas City.',
   alternates: { canonical: '/about' },
 }
 
@@ -20,11 +20,13 @@ const breadcrumbSchema = {
 }
 
 const milestones = [
-  { year: 'Early 2000s', title: 'SILBI Founded', description: 'Samahan ng Ikatlong Lahi ng Batangas, Inc. was established as a community-based organization for LGBTQIA+ individuals in Batangas City.' },
-  { year: '2007', title: 'Aura-Ala-Eh Pageant Launched', description: 'The flagship annual pageant began, becoming a beloved celebration of LGBTQIA+ talent, beauty, and community pride in Batangas.' },
-  { year: '2010s', title: 'HIV Advocacy Formalized', description: 'SILBI partnered with health agencies to expand HIV testing, counseling, and awareness programs across Batangas City and nearby municipalities.' },
-  { year: '2015', title: 'Ordinance No. 12 Passed', description: "Batangas City enacted its Anti-Discrimination Ordinance, a landmark victory that SILBI actively campaigned for — protecting LGBTQIA+ residents' rights in housing, employment, and public services." },
-  { year: '2020–Present', title: 'Community Resilience', description: 'Through pandemic relief, online advocacy, and continuous programs, SILBI remains the steadfast voice for the LGBTQIA+ community in Batangas City.' },
+  { year: 'July 2015', title: 'SILBI Established', description: 'LGBTQIA-SILBI Batangas City Inc. — the Samahan ng Ikatlong Lahi ng Batangas — was formally established, with founding president Raul "Ariane" Gamboa leading the organization.' },
+  { year: 'December 4, 2017', title: 'Officers Formally Sworn In', description: 'SILBI officers took their oath before Batangas City Mayor Beverley Dimacuha, marking the organization\'s formal recognition by the city government with over 400 founding members.' },
+  { year: '2018', title: 'HIV Advocacy Partnerships', description: 'SILBI partnered with the City Health Office, Provincial DOH, and Batangas Medical Center Wellness Home on HIV/AIDS awareness campaigns and candlelight memorials.' },
+  { year: '2019', title: 'Aura-Ala-Eh Launched', description: 'SILBI launched its flagship Aura-Ala-Eh hair and makeup artistry competition at the Batangas City Sports Coliseum, celebrating LGBTQIA+ creative talent with cash prizes and national competition slots.' },
+  { year: '2022', title: 'City Accreditation Granted', description: 'The Batangas City Council formally accredited SILBI through a council resolution, cementing the organization\'s standing as an official civil society partner of the city government.' },
+  { year: 'June 2024', title: '9th Batangan Pride March', description: 'SILBI, under President Loubrix Bay, led 80 members to the 9th Batangan Pride March at FPJ Arena, San Jose, Batangas — competing in festival, makeup, and hair coloring events.' },
+  { year: 'June 2025', title: 'First-Ever Batangas City Pride Celebration', description: '"Rampa Na, Kahit Ano Ka, Love Ka!" — SILBI organized the first official Pride Month celebration in Batangas City, with a Pride Walk from the Provincial Capitol to the BCCC, Bahaghari Awards, and guest of honor Rep. Perci Cendana of Akbayan.' },
 ]
 
 const values = [
@@ -59,7 +61,7 @@ export default function AboutPage() {
                 Our Story
               </div>
               <h1 className="font-heading text-5xl sm:text-6xl font-bold leading-tight mb-6">
-                20+ Years of{' '}
+                A Decade of{' '}
                 <span className="text-violet-300">
                   Pride & Service
                 </span>
@@ -119,6 +121,28 @@ export default function AboutPage() {
                     </div>
                   </div>
                 ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Leadership */}
+        <section className="py-16 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="mb-10">
+              <p className="text-violet-600 text-sm font-medium uppercase tracking-widest mb-3">Our Leaders</p>
+              <h2 className="font-heading text-3xl sm:text-4xl text-zinc-900">Leadership</h2>
+            </div>
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl">
+              <div className="p-7 rounded-2xl bg-violet-700 text-white">
+                <div className="text-xs font-semibold uppercase tracking-widest text-violet-300 mb-1">Current President</div>
+                <div className="font-heading text-2xl text-white mb-1">Loubrix Bay</div>
+                <p className="text-violet-200 text-sm leading-relaxed">Leads SILBI Batangas City since at least 2024, overseeing the organization's programs, advocacy, and the historic first Pride Month celebration in Batangas City in June 2025.</p>
+              </div>
+              <div className="p-7 rounded-2xl bg-violet-50 border border-violet-100">
+                <div className="text-xs font-semibold uppercase tracking-widest text-violet-500 mb-1">Founding President</div>
+                <div className="font-heading text-2xl text-zinc-900 mb-1">Raul &ldquo;Ariane&rdquo; Gamboa</div>
+                <p className="text-zinc-500 text-sm leading-relaxed">Founded SILBI and served as its first formally sworn president in December 2017. A hairstylist, makeup artist, and fashion designer who built the organization from the ground up.</p>
               </div>
             </div>
           </div>

@@ -35,8 +35,8 @@ const upcomingEvents = [
     month: 'AUG',
     day: '15',
     year: '2026',
-    title: 'Aura-Ala-Eh Beauty Pageant 2026',
-    description: "SILBI's flagship annual pageant — a night of glamour, talent, and community pride. The Aura-Ala-Eh pageant has been a cornerstone of LGBTQIA+ culture in Batangas for nearly two decades.",
+    title: 'Aura-Ala-Eh 2026',
+    description: "SILBI's flagship hair and makeup artistry competition — celebrating LGBTQIA+ creative talent in hairstyling, coloring, and makeup artistry. Past editions have featured cash prizes, trophies, and national competition slots.",
     location: 'Batangas City, Philippines',
     category: 'Flagship Event',
     categoryColor: 'rose',
@@ -57,23 +57,23 @@ const upcomingEvents = [
 
 const pastHighlights = [
   {
-    title: 'Aura-Ala-Eh 2025',
-    description: "One of the most memorable editions of SILBI's iconic annual beauty pageant, celebrating LGBTQIA+ talent and community bonds.",
-    category: 'Pageant',
-  },
-  {
-    title: 'Batangas Pride March 2025',
-    description: 'Hundreds marched through Batangas City in solidarity, joy, and pride — one of the largest LGBTQIA+ gatherings in the province.',
+    title: 'First Batangas City Pride Celebration — June 2025',
+    description: '"Rampa Na, Kahit Ano Ka, Love Ka!" — SILBI organized the first official Pride Month celebration in Batangas City, featuring a Pride Walk from the Provincial Capitol to BCCC, Bahaghari Awards, and a fashion competition.',
     category: 'Pride',
   },
   {
-    title: 'World AIDS Day 2025',
-    description: 'Free HIV testing, candlelight ceremony, and community education marked this important annual event.',
-    category: 'Advocacy',
+    title: '9th Batangan Pride March — June 2024',
+    description: '80 SILBI members joined the 9th Batangan Pride March at FPJ Arena, San Jose, Batangas. Members competed in Festival King & Queen, Commercial Makeup, and Hair Coloring categories.',
+    category: 'Pride',
   },
   {
-    title: 'Community Livelihood Fair 2025',
-    description: 'Skills workshops, livelihood exhibits, and mutual aid activities supporting LGBTQIA+ community members.',
+    title: 'Aura-Ala-Eh 2019',
+    description: "SILBI's flagship hair and makeup artistry competition at Batangas City Sports Coliseum. Categories: Ladies Haircut & Blowdry, Commercial Makeup, Men's Haircut, and Bridal Makeup. Grand prize: ₱15,000 + trip to Thailand.",
+    category: 'Competition',
+  },
+  {
+    title: 'BRADkada Livelihood Program',
+    description: 'SILBI partnered with then-Congresswoman Beverley Dimacuha for a hairstyling skills seminar and kit distribution, providing livelihood support to LGBTQIA+ members.',
     category: 'Outreach',
   },
 ]
@@ -171,7 +171,7 @@ export default function EventsPage() {
         {/* Aura-Ala-Eh spotlight */}
         <section className="py-16 bg-violet-50">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="rounded-3xl bg-gradient-to-br from-rose-600 to-pink-700 text-white p-10 md:p-14 relative overflow-hidden">
+            <div className="rounded-3xl bg-violet-700 text-white p-10 md:p-14 relative overflow-hidden">
               <div className="absolute top-0 right-0 w-[300px] h-[300px] bg-white/10 rounded-full blur-[80px]" />
               <div className="relative grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
                 <div>
@@ -180,15 +180,15 @@ export default function EventsPage() {
                     SILBI Flagship Event
                   </div>
                   <h2 className="font-heading text-4xl md:text-5xl font-bold mb-5">Aura-Ala-Eh</h2>
-                  <p className="text-rose-100 text-lg leading-relaxed mb-6">
-                    More than a beauty pageant — Aura-Ala-Eh is SILBI&apos;s annual celebration of LGBTQIA+ identity, artistry, and community pride. Since its founding, it has been the most anticipated LGBTQIA+ event in Batangas City.
+                  <p className="text-violet-100 text-lg leading-relaxed mb-6">
+                    SILBI&apos;s signature annual event — a hair and makeup artistry competition celebrating LGBTQIA+ creative excellence. Competitors showcase their skills in hairstyling, hair coloring, and makeup artistry before a panel of industry judges.
                   </p>
-                  <p className="text-rose-100 leading-relaxed">
-                    Contestants from the LGBTQIA+ community compete in evening wear, talent, and question-and-answer rounds — with proceeds supporting SILBI&apos;s community programs.
+                  <p className="text-violet-100 leading-relaxed">
+                    Past editions have been held at the Batangas City Sports Coliseum, with prizes including cash awards, trophies, and slots in national competitions — with all proceeds supporting SILBI&apos;s community programs.
                   </p>
                 </div>
                 <div className="grid grid-cols-2 gap-4">
-                  {['Community-Run', 'Annual Tradition', 'Talent & Beauty', 'Fundraiser for Programs'].map((tag) => (
+                  {['Hair & Makeup Artistry', 'Annual Competition', 'Cash Prizes & Trophies', 'Fundraiser for Programs'].map((tag) => (
                     <div key={tag} className="p-5 rounded-2xl bg-white/15 backdrop-blur-sm text-center">
                       <div className="text-white font-heading font-bold text-sm">{tag}</div>
                     </div>

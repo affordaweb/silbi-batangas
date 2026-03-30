@@ -34,9 +34,9 @@ const programs = [
 ]
 
 const stats = [
-  { value: '20+', label: 'Years of Service' },
-  { value: '5,000+', label: 'Lives Touched' },
-  { value: '100+', label: 'Events Organized' },
+  { value: '10+', label: 'Years of Service' },
+  { value: '400+', label: 'Members' },
+  { value: '80+', label: 'Pride Marchers (2024)' },
   { value: '1', label: 'Anti-Discrimination Ordinance' },
 ]
 
@@ -51,8 +51,8 @@ const upcomingEvents = [
   {
     month: 'AUG',
     day: '15',
-    title: 'Aura-Ala-Eh Beauty Pageant',
-    description: "SILBI's iconic annual pageant celebrating LGBTQIA+ talent, beauty, and community spirit.",
+    title: 'Aura-Ala-Eh',
+    description: "SILBI's flagship hair and makeup artistry competition — celebrating LGBTQIA+ creative excellence with cash prizes and national competition slots.",
     tag: 'Flagship Event',
   },
   {
@@ -92,7 +92,7 @@ export default function HomePage() {
                   Community.
                 </h1>
                 <p className="text-zinc-400 text-lg leading-relaxed mb-10 max-w-md">
-                  <strong className="text-white">Samahan ng Ikatlong Lahi ng Batangas, Inc.</strong> — over two decades of empowering the LGBTQIA+ community through HIV advocacy, outreach, and rights protection.
+                  <strong className="text-white">Samahan ng Ikatlong Lahi ng Batangas, Inc.</strong> — established in 2015, empowering the LGBTQIA+ community of Batangas City through HIV advocacy, outreach, and rights protection.
                 </p>
                 <div className="flex flex-wrap gap-4">
                   <Link
@@ -142,7 +142,7 @@ export default function HomePage() {
                   <em>LGBTQIA+ Rights</em>
                 </h2>
                 <p className="text-zinc-500 leading-relaxed mb-5">
-                  Founded in the early 2000s, LGBTQIA-SILBI Batangas City Inc. — the <em>Samahan ng Ikatlong Lahi ng Batangas</em> — has been the primary organization advocating for LGBTQIA+ rights, health, and welfare in Batangas City.
+                  Founded in July 2015, LGBTQIA-SILBI Batangas City Inc. — the <em>Samahan ng Ikatlong Lahi ng Batangas</em> — has been the primary organization advocating for LGBTQIA+ rights, health, and welfare in Batangas City.
                 </p>
                 <p className="text-zinc-500 leading-relaxed mb-8">
                   Our work spans HIV prevention and testing, community outreach, livelihood programs, mental health support, and the fight for legislative protection — including the landmark Batangas City <strong className="text-zinc-900">Ordinance No. 12</strong>.

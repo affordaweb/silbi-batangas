@@ -1,4 +1,5 @@
 import type { Metadata } from 'next'
+import Image from 'next/image'
 import Link from 'next/link'
 import { Heart, Users, Ribbon, Shield, Megaphone, CalendarDays, ArrowRight, CheckCircle, Sparkles } from 'lucide-react'
 import Navbar from '@/components/Navbar'
@@ -61,6 +62,34 @@ const upcomingEvents = [
     title: 'World AIDS Day 2026',
     description: 'Community commemoration with free HIV testing, awareness activities, and a remembrance ceremony.',
     tag: 'HIV Advocacy',
+  },
+]
+
+// Community photos from SILBI events and activities
+const communityPhotos = [
+  {
+    src: 'https://scontent.fmnl30-1.fna.fbcdn.net/v/t39.30808-6/610971507_122200615928363888_550435625614358058_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeHpnihPMnxfKUa1VE4SJXWjM8LIdIJi2OUzwsh0gmLY5TOhxonVD1cFmuhL9__p1J0&_nc_ohc=4C6u9AkQD8kQ7kNvwHIxwKL&_nc_oc=AdrBJtq6xQ7tuwMwiKGM3SuQ4Lv5bVLBTYHn3ktlPG6x9hspCEEjWpZzedEErWaX75U&_nc_zt=23&_nc_ht=scontent.fmnl30-1.fna&_nc_gid=vIyKa8mAFG6ZlLTGfIH7zw&_nc_ss=7a3a8&oh=00_Af31I0f21N-9hvojFdGTHTpu5IsIh1OVYKhzvYqyAEgZEQ&oe=69D7B217',
+    alt: 'SILBI Batangas community gathering',
+  },
+  {
+    src: 'https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-6/608927093_122200615598363888_3855345760959684008_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeEjwxzP5v5uNkml14iGQ8P6tnO_94_bWnq2c7_3j9taeiyMKL2b6SPSCiUTPNN9XIc&_nc_ohc=sWm9oLSQngsQ7kNvwFXysVt&_nc_oc=AdrxaX-ZJ-Yu0rne_DUywoNrq3u6nRJH1ds-89UrufLvabzPxOykS78zvI_ZUJnSxkI&_nc_zt=23&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=Uj44OEoItMr4AjaXkNAOjA&_nc_ss=7a3a8&oh=00_Af0PaZjZiymcGEpoJJNDuX7LXZAvgMg-nCpUeN8u5mMsYg&oe=69D7A126',
+    alt: 'Pride celebration event',
+  },
+  {
+    src: 'https://scontent.fmnl30-2.fna.fbcdn.net/v/t39.30808-6/600304243_122198358134363888_599989043554930694_n.jpg?_nc_cat=110&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeH9a1ILcVCwYFYcsDQ3C4_1LHJ0mi0rwBAscnSaLSvAEEtdH7qXLZyjQqvQpXJboLg&_nc_ohc=RwwXo2v8lNsQ7kNvwH2b1iC&_nc_oc=AdpsY_zgMuH5oqQrZxKZ74xji-W-zNjV4ug1iqRT8iF9wpClOU9oAZpRlwh87YQNs4M&_nc_zt=23&_nc_ht=scontent.fmnl30-2.fna&_nc_gid=Wq24Wj29rqDo93Ksl6rm5Q&_nc_ss=7a3a8&oh=00_Af1XHG3HfXF2o3rwwI-9s4Ke6aXmBCldfr1vMEv18K9Iqg&oe=69D7A029',
+    alt: 'Community outreach program',
+  },
+  {
+    src: 'https://scontent.fmnl30-1.fna.fbcdn.net/v/t39.30808-6/600251011_122198358062363888_3084036396025018211_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeECkcfoRhfG0PRpPDWmYWuAkP8yY9GvZzGQ_zJj0a9nMfy7_9g3V7b2Oy4rL93lpLc&_nc_ohc=o50bZNEfmiAQ7kNvwHDTabl&_nc_oc=Adr38u1c5xS-xr4m2SPH0xjNdZNojf3VzsXyVVPDqb9YugJPN4Md8215NEACZAlcWJU&_nc_zt=23&_nc_ht=scontent.fmnl30-1.fna&_nc_gid=uUOOcuJJo8ln7EtOkdolkw&_nc_ss=7a3a8&oh=00_Af1p_972Eg8xFAMiTnfAVHiLBR58zaXOkBpgwImJwuJz6A&oe=69D7A6E0',
+    alt: 'SILBI members at event',
+  },
+  {
+    src: 'https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-6/602007861_122198358044363888_6916170435435317843_n.jpg?_nc_cat=101&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeFR5WjIK_KnVsWicJATytI72Knr_ORF1ELYqev85EXUQqU2JZeeIqL7WYrSWedTrok&_nc_ohc=lfbIbwQgwKoQ7kNvwHxPzVR&_nc_oc=AdoXrsY9Qg2vRFUTU-V9KNYmeVKjbCN2EoEuWt9aLWwI5X91phyNhQFGnzIHmojah_8&_nc_zt=23&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=pM1GZ6gM1z_DdbsqzigtuQ&_nc_ss=7a3a8&oh=00_Af2OZmjzBRe3NjHW6ZPWDIn8-fu4mKOgL7Rsfkr-GNQAKA&oe=69D7AEA0',
+    alt: 'HIV advocacy workshop',
+  },
+  {
+    src: 'https://scontent.fmnl30-3.fna.fbcdn.net/v/t39.30808-6/602346142_122198357990363888_7155287960675820069_n.jpg?_nc_cat=108&ccb=1-7&_nc_sid=dd6889&_nc_eui2=AeFp8ywhzMOqgxCsMZrOr9dHx5A2a4Srm3jHkDZrhKubeB9znjc6VW4jtulcbDLuMig&_nc_ohc=QOvJ69P14QEQ7kNvwHy_7Iw&_nc_oc=Adpvz3C3HN977pFGaDOoYLJ3X8PO8VuqTNEypM6abfzRM8maieF8u2oVeSHEdYBiejI&_nc_zt=23&_nc_ht=scontent.fmnl30-3.fna&_nc_gid=2W2chJcVaXYXwKMhqwgOZw&_nc_ss=7a3a8&oh=00_Af3Lc5DeOTnclSBUt753SqYBweCUzU4-UhrKbY2Kdn5cuQ&oe=69D7A6A9',
+    alt: 'Community support group',
   },
 ]
 
@@ -233,6 +262,43 @@ export default function HomePage() {
               >
                 View All Programs <ArrowRight className="w-4 h-4" />
               </Link>
+            </div>
+          </div>
+        </section>
+
+        {/* Community Gallery Section */}
+        <section className="py-24 bg-white relative">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-14">
+              <div className="section-label">Our Community</div>
+              <h2 className="section-title">Moments of Pride & Service</h2>
+              <p className="section-subtitle mx-auto">
+                Capturing the spirit, joy, and solidarity of the LGBTQIA+ community of Batangas City.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4">
+              {communityPhotos.map((photo, index) => (
+                <div
+                  key={index}
+                  className={`relative group overflow-hidden rounded-2xl ${
+                    index === 0 ? 'md:col-span-2 md:row-span-2' : ''
+                  }`}
+                >
+                  <Image
+                    src={photo.src}
+                    alt={photo.alt}
+                    width={index === 0 ? 800 : 400}
+                    height={index === 0 ? 800 : 400}
+                    className="w-full h-full object-cover aspect-square transition-transform duration-500 group-hover:scale-110"
+                    loading={index < 3 ? 'eager' : 'lazy'}
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-primary-900/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+                  <div className="absolute bottom-0 left-0 right-0 p-4 translate-y-full group-hover:translate-y-0 transition-transform duration-300">
+                    <p className="text-white text-sm font-medium">{photo.alt}</p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>

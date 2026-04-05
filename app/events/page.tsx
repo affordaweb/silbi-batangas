@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Heart, CalendarDays, MapPin, ArrowRight, Star, Ribbon } from 'lucide-react'
+import { CalendarDays, MapPin, ArrowRight, Star, Ribbon } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -14,8 +14,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://silbi-batangas.vercel.app' },
-    { '@type': 'ListItem', position: 2, name: 'Events', item: 'https://silbi-batangas.vercel.app/events' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://v2-sigma.vercel.app' },
+    { '@type': 'ListItem', position: 2, name: 'Events', item: 'https://v2-sigma.vercel.app/events' },
   ],
 }
 
@@ -242,3 +242,4 @@ export default function EventsPage() {
     </>
   )
 }
+

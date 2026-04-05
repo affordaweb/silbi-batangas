@@ -14,7 +14,7 @@ const dmSerif = DM_Serif_Display({
   style: ['normal', 'italic'],
 })
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://silbi-batangas.vercel.app'
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://v2-sigma.vercel.app'
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
@@ -94,3 +94,4 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     </html>
   )
 }
+

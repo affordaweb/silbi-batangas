@@ -124,6 +124,46 @@ h1, h2, h3, h4, h5, h6 {
   100% { background-position: 0% 50%; }
 }
 
+@keyframes bounceIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes slideInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  0% {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
 .animate-fade-up {
   animation: fadeUp 0.7s ease-out forwards;
 }
@@ -134,6 +174,18 @@ h1, h2, h3, h4, h5, h6 {
 
 .animate-float {
   animation: float 6s ease-in-out infinite;
+}
+
+.animate-bounce-in {
+  animation: bounceIn 0.8s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.6s ease-out forwards;
+}
+
+.animate-slide-in-right {
+  animation: slideInRight 0.6s ease-out forwards;
 }
 
 /* ── Luxury Background Effects ────────────── */
@@ -219,11 +271,13 @@ h1, h2, h3, h4, h5, h6 {
   border-radius: 9999px;
   box-shadow: 0 4px 20px rgba(124, 58, 237, 0.4);
   transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .btn-luxury-primary:hover {
   transform: translateY(-2px);
   box-shadow: 0 8px 32px rgba(124, 58, 237, 0.55);
+  background: linear-gradient(135deg, #5B21B6 0%, #6D28D9 100%);
 }
 
 .btn-luxury-primary::after {
@@ -237,6 +291,79 @@ h1, h2, h3, h4, h5, h6 {
 
 .btn-luxury-primary:hover::after {
   transform: translateX(120%);
+}
+
+.btn-luxury-secondary {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: linear-gradient(135deg, #F3F4F6 0%, #E5E7EB 100%);
+  color: #374151;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 9999px;
+  border: 2px solid #D1D5DB;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-luxury-secondary:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  background: linear-gradient(135deg, #E5E7EB 0%, #D1D5DB 100%);
+  border-color: #9CA3AF;
+}
+
+.btn-luxury-white {
+  position: relative;
+  overflow: hidden;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  color: #4C1D95;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.btn-luxury-white:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+  background: rgba(255, 255, 255, 1);
+}
+
+.btn-luxury-outline-white {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.875rem 2rem;
+  background: transparent;
+  color: white;
+  font-weight: 600;
+  font-size: 0.9375rem;
+  border-radius: 9999px;
+  border: 2px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s ease;
+}
+
+.btn-luxury-outline-white:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-1px);
+  box-shadow: 0 4px 16px rgba(255, 255, 255, 0.1);
 }
 
 .btn-luxury-secondary {

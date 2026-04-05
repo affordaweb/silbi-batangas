@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next'
 
-const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://silbi-batangas.vercel.app'
+const BASE_URL = process.env.NEXT_PUBLIC_BASE_URL ?? 'https://v2-sigma.vercel.app'
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -14,3 +14,4 @@ export default function robots(): MetadataRoute.Robots {
     sitemap: `${BASE_URL}/sitemap.xml`,
   }
 }
+

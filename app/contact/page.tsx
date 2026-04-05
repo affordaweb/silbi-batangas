@@ -15,8 +15,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://silbi-batangas.vercel.app' },
-    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://silbi-batangas.vercel.app/contact' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://v2-sigma.vercel.app' },
+    { '@type': 'ListItem', position: 2, name: 'Contact', item: 'https://v2-sigma.vercel.app/contact' },
   ],
 }
 
@@ -134,3 +134,4 @@ export default function ContactPage() {
     </>
   )
 }
+

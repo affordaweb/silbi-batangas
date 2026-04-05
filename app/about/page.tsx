@@ -14,8 +14,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://silbi-batangas.vercel.app' },
-    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://silbi-batangas.vercel.app/about' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://v2-sigma.vercel.app' },
+    { '@type': 'ListItem', position: 2, name: 'About', item: 'https://v2-sigma.vercel.app/about' },
   ],
 }
 
@@ -137,7 +137,7 @@ export default function AboutPage() {
               <div className="p-7 rounded-2xl bg-violet-700 text-white">
                 <div className="text-xs font-semibold uppercase tracking-widest text-violet-300 mb-1">Current President</div>
                 <div className="font-heading text-2xl text-white mb-1">Jordan Luna Magtibay</div>
-                <p className="text-violet-200 text-sm leading-relaxed">The newly elected president of LGBTQIA-SILBI Batangas City Inc., leading the organization's programs, advocacy, and community service for the community of Batangas City.</p>
+                <p className="text-violet-200 text-sm leading-relaxed">The newly elected president of LGBTQIA-SILBI Batangas City Inc., leading the organization&apos;s programs, advocacy, and community service for the community of Batangas City.</p>
               </div>
               <div className="p-7 rounded-2xl bg-violet-50 border border-violet-100">
                 <div className="text-xs font-semibold uppercase tracking-widest text-violet-500 mb-1">Founding President</div>
@@ -228,3 +228,4 @@ export default function AboutPage() {
     </>
   )
 }
+

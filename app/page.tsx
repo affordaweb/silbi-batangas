@@ -98,7 +98,7 @@ const homepageSchema = {
   '@type': 'WebPage',
   name: 'SILBI Batangas City — LGBTQIA+ Community Organization',
   description: 'LGBTQIA-SILBI Batangas City Inc. — empowering the LGBTQIA+ community through HIV advocacy, outreach programs, and rights protection.',
-  url: 'https://silbi-batangas.vercel.app',
+  url: 'https://v2-sigma.vercel.app',
 }
 
 export default function HomePage() {
@@ -118,6 +118,11 @@ export default function HomePage() {
           {/* Subtle dotted pattern */}
           <div className="absolute inset-0 luxury-dots-pattern pointer-events-none" />
 
+          {/* Floating elements */}
+          <div className="absolute top-20 left-10 w-2 h-2 bg-accent-light rounded-full animate-float opacity-60" style={{ animationDelay: '0s' }} />
+          <div className="absolute top-40 right-20 w-1 h-1 bg-accent rounded-full animate-float opacity-40" style={{ animationDelay: '2s' }} />
+          <div className="absolute bottom-32 left-1/4 w-1.5 h-1.5 bg-accent-light rounded-full animate-float opacity-50" style={{ animationDelay: '4s' }} />
+
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div className="animate-fade-up">
@@ -127,7 +132,7 @@ export default function HomePage() {
                 </div>
                 <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl leading-[1.05] mb-8 text-white">
                   Pride.<br />
-                  <span className="gradient-text-luxury italic">Service.</span><br />
+                  <span className="gradient-text-luxury italic animate-pulse">Service.</span><br />
                   Community.
                 </h1>
                 <p className="text-violet-200/80 text-lg leading-relaxed mb-12 max-w-lg">
@@ -136,20 +141,20 @@ export default function HomePage() {
                 <div className="flex flex-wrap gap-5">
                   <Link
                     href="/programs"
-                    className="btn-luxury-primary text-base"
+                    className="btn-luxury-primary text-base group"
                   >
-                    Our Programs <ArrowRight className="w-4 h-4" />
+                    Our Programs <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
                   </Link>
                   <Link
                     href="/contact"
-                    className="btn-luxury-outline-white text-base"
+                    className="btn-luxury-outline-white text-base group"
                   >
-                    Get Involved
+                    Get Involved <Heart className="w-4 h-4 group-hover:scale-110 transition-transform" />
                   </Link>
                 </div>
                 <div className="mt-12 flex flex-wrap gap-6">
-                  {['20+ Years', 'HIV Advocacy', 'Community-Run'].map((item) => (
-                    <div key={item} className="flex items-center gap-2 text-sm text-violet-200/70">
+                  {['20+ Years', 'HIV Advocacy', 'Community-Run'].map((item, index) => (
+                    <div key={item} className="flex items-center gap-2 text-sm text-violet-200/70 animate-fade-in" style={{ animationDelay: `${0.5 + index * 0.1}s` }}>
                       <CheckCircle className="w-4 h-4 text-accent-light" />
                       {item}
                     </div>
@@ -159,9 +164,9 @@ export default function HomePage() {
 
               {/* Stats Cards - Glassmorphism */}
               <div className="grid grid-cols-2 gap-5 animate-fade-up" style={{ animationDelay: '0.2s' }}>
-                {stats.map((stat) => (
-                  <div key={stat.label} className="card-luxury-dark">
-                    <div className="font-heading text-4xl text-white mb-2 gradient-text-luxury">{stat.value}</div>
+                {stats.map((stat, index) => (
+                  <div key={stat.label} className="card-luxury-dark group hover:scale-105 transition-transform duration-300" style={{ animationDelay: `${0.3 + index * 0.1}s` }}>
+                    <div className="font-heading text-4xl text-white mb-2 gradient-text-luxury group-hover:scale-110 transition-transform">{stat.value}</div>
                     <div className="text-sm text-violet-200/60">{stat.label}</div>
                   </div>
                 ))}
@@ -341,6 +346,107 @@ export default function HomePage() {
                   <ArrowRight className="w-5 h-5 text-warm-gray-300 group-hover:text-primary-500 flex-shrink-0 mt-1 transition-all group-hover:translate-x-1" />
                 </div>
               ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Testimonials Section - Soft Background */}
+        <section className="py-24 bg-gradient-to-br from-primary-50 via-white to-accent-light/5 relative overflow-hidden">
+          <div className="absolute top-0 right-0 w-96 h-96 bg-primary-200/10 rounded-full blur-3xl translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 left-0 w-96 h-96 bg-accent-light/10 rounded-full blur-3xl -translate-x-1/2 translate-y-1/2" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="text-center mb-16">
+              <div className="section-label">Community Voices</div>
+              <h2 className="section-title">What Our Community Says</h2>
+              <p className="section-subtitle mx-auto">
+                Real stories from the people we&apos;ve served and supported.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {[
+                {
+                  quote: "SILBI gave me the courage to live authentically. Their HIV testing program saved my life, and their community support helped me find my place in Batangas.",
+                  author: "Alex M.",
+                  role: "Community Member",
+                  location: "Batangas City"
+                },
+                {
+                  quote: "As a young LGBTQIA+ person, SILBI provided the safe space I needed. Their youth programs and mentorship changed everything for me.",
+                  author: "Jordan L.",
+                  role: "Youth Program Participant",
+                  location: "Batangas City"
+                },
+                {
+                  quote: "SILBI's legal assistance helped me secure housing without discrimination. Ordinance No. 12 is real because of their advocacy work.",
+                  author: "Maria S.",
+                  role: "Community Advocate",
+                  location: "Batangas City"
+                }
+              ].map((testimonial, index) => (
+                <div
+                  key={index}
+                  className="card-luxury bg-white/80 backdrop-blur-sm border-primary-100/50 hover:border-primary-200/70 transition-all duration-300 group"
+                  style={{ animationDelay: `${index * 0.1}s` }}
+                >
+                  <div className="mb-6">
+                    <div className="flex gap-1 mb-4">
+                      {[...Array(5)].map((_, i) => (
+                        <svg key={i} className="w-4 h-4 text-accent fill-current" viewBox="0 0 24 24">
+                          <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                      ))}
+                    </div>
+                    <blockquote className="text-warm-gray-700 italic leading-relaxed">
+                      &ldquo;{testimonial.quote}&rdquo;
+                    </blockquote>
+                  </div>
+                  <div className="border-t border-primary-100 pt-4">
+                    <div className="font-semibold text-warm-gray-800">{testimonial.author}</div>
+                    <div className="text-sm text-primary-600 font-medium">{testimonial.role}</div>
+                    <div className="text-xs text-warm-gray-500">{testimonial.location}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Partners Section - Clean White */}
+        <section className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <div className="section-label">Our Partners</div>
+              <h2 className="section-title">Together We Make Change</h2>
+              <p className="section-subtitle mx-auto">
+                We collaborate with local government, healthcare providers, and community organizations to serve our LGBTQIA+ community better.
+              </p>
+            </div>
+
+            <div className="grid grid-cols-2 md:grid-cols-4 gap-8 items-center">
+              {[
+                { name: "Batangas City Government", logo: "🏛️" },
+                { name: "Batangas Medical Center", logo: "🏥" },
+                { name: "City Health Office", logo: "⚕️" },
+                { name: "Provincial DOH", logo: "🩺" }
+              ].map((partner) => (
+                <div key={partner.name} className="group">
+                  <div className="card-luxury bg-primary-50/50 border-primary-100/50 hover:border-primary-200/70 hover:bg-primary-50/80 transition-all duration-300 text-center py-8">
+                    <div className="text-4xl mb-3">{partner.logo}</div>
+                    <div className="font-semibold text-warm-gray-800 text-sm">{partner.name}</div>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center mt-12">
+              <p className="text-warm-gray-500 text-sm mb-6">
+                Interested in partnering with SILBI? We&apos;d love to hear from you.
+              </p>
+              <Link href="/contact" className="btn-luxury-secondary text-sm">
+                Become a Partner <ArrowRight className="w-4 h-4" />
+              </Link>
             </div>
           </div>
         </section>

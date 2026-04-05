@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Heart, Ribbon, Users, Shield, Brain, BookOpen, Utensils, Home, ArrowRight, CheckCircle, Phone } from 'lucide-react'
+import { Heart, Ribbon, Users, Shield, Brain, BookOpen, Home, ArrowRight, CheckCircle, Phone } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -14,8 +14,8 @@ const breadcrumbSchema = {
   '@context': 'https://schema.org',
   '@type': 'BreadcrumbList',
   itemListElement: [
-    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://silbi-batangas.vercel.app' },
-    { '@type': 'ListItem', position: 2, name: 'Programs', item: 'https://silbi-batangas.vercel.app/programs' },
+    { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://v2-sigma.vercel.app' },
+    { '@type': 'ListItem', position: 2, name: 'Programs', item: 'https://v2-sigma.vercel.app/programs' },
   ],
 }
 
@@ -220,3 +220,4 @@ export default function ProgramsPage() {
     </>
   )
 }
+

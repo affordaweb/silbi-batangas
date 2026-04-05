@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { Heart, Users, Ribbon, Shield, Megaphone, CalendarDays, ArrowRight, CheckCircle } from 'lucide-react'
+import { Heart, Users, Ribbon, Shield, Megaphone, CalendarDays, ArrowRight, CheckCircle, Sparkles } from 'lucide-react'
 import Navbar from '@/components/Navbar'
 import Footer from '@/components/Footer'
 
@@ -77,53 +77,63 @@ export default function HomePage() {
     <>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(homepageSchema) }} />
       <Navbar />
-      <main className="pt-16">
+      <main className="pt-[72px]">
 
-        {/* Hero */}
-        <section className="bg-violet-900 text-white py-28 md:py-36 relative overflow-hidden">
-          <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_bottom_left,_var(--tw-gradient-stops))] from-violet-700/40 via-transparent to-transparent pointer-events-none" />
+        {/* Hero Section - Luxury Dark */}
+        <section className="luxury-gradient-bg text-white py-32 md:py-44 relative overflow-hidden">
+          {/* Animated glow orbs */}
+          <div className="luxury-glow-orb luxury-glow-orb-1" />
+          <div className="luxury-glow-orb luxury-glow-orb-2" />
+          <div className="luxury-glow-orb luxury-glow-orb-3" />
+          
+          {/* Subtle dotted pattern */}
+          <div className="absolute inset-0 luxury-dots-pattern pointer-events-none" />
+
           <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-              <div>
-                <p className="text-violet-400 text-sm font-medium uppercase tracking-widest mb-5">Batangas City, Philippines</p>
-                <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl leading-[1.1] mb-6 text-white">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+              <div className="animate-fade-up">
+                <div className="section-label-white mb-6">
+                  <Sparkles className="w-4 h-4" />
+                  Batangas City, Philippines
+                </div>
+                <h1 className="font-heading text-5xl sm:text-6xl lg:text-7xl leading-[1.05] mb-8 text-white">
                   Pride.<br />
-                  <em className="text-violet-300">Service.</em><br />
+                  <span className="gradient-text-luxury italic">Service.</span><br />
                   Community.
                 </h1>
-                <p className="text-zinc-400 text-lg leading-relaxed mb-10 max-w-md">
+                <p className="text-violet-200/80 text-lg leading-relaxed mb-12 max-w-lg">
                   <strong className="text-white">Samahan ng Ikatlong Lahi ng Batangas, Inc.</strong> — established in 2015, empowering the LGBTQIA+ community of Batangas City through HIV advocacy, outreach, and rights protection.
                 </p>
-                <div className="flex flex-wrap gap-4">
+                <div className="flex flex-wrap gap-5">
                   <Link
                     href="/programs"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 bg-violet-700 hover:bg-violet-600 text-white font-medium rounded-lg transition-all text-sm"
+                    className="btn-luxury-primary text-base"
                   >
                     Our Programs <ArrowRight className="w-4 h-4" />
                   </Link>
                   <Link
                     href="/contact"
-                    className="inline-flex items-center gap-2 px-7 py-3.5 border border-zinc-700 text-zinc-300 hover:border-zinc-500 hover:text-white font-medium rounded-lg transition-all text-sm"
+                    className="btn-luxury-outline-white text-base"
                   >
                     Get Involved
                   </Link>
                 </div>
-                <div className="mt-10 flex flex-wrap gap-5">
-                  {['20+ Years', 'HIV Advocacy', 'Community-Run'].map((t) => (
-                    <div key={t} className="flex items-center gap-1.5 text-sm text-violet-300">
-                      <CheckCircle className="w-4 h-4 text-violet-400" />
-                      {t}
+                <div className="mt-12 flex flex-wrap gap-6">
+                  {['20+ Years', 'HIV Advocacy', 'Community-Run'].map((item) => (
+                    <div key={item} className="flex items-center gap-2 text-sm text-violet-200/70">
+                      <CheckCircle className="w-4 h-4 text-accent-light" />
+                      {item}
                     </div>
                   ))}
                 </div>
               </div>
 
-              {/* Stats */}
-              <div className="grid grid-cols-2 gap-4">
+              {/* Stats Cards - Glassmorphism */}
+              <div className="grid grid-cols-2 gap-5 animate-fade-up" style={{ animationDelay: '0.2s' }}>
                 {stats.map((stat) => (
-                  <div key={stat.label} className="p-7 rounded-xl bg-violet-800/60 border border-violet-700/50 backdrop-blur-sm">
-                    <div className="font-heading text-4xl text-white mb-2">{stat.value}</div>
-                    <div className="text-sm text-violet-300">{stat.label}</div>
+                  <div key={stat.label} className="card-luxury-dark">
+                    <div className="font-heading text-4xl text-white mb-2 gradient-text-luxury">{stat.value}</div>
+                    <div className="text-sm text-violet-200/60">{stat.label}</div>
                   </div>
                 ))}
               </div>
@@ -131,77 +141,95 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* About strip */}
-        <section className="py-20 bg-white">
+        {/* About Section - Clean White */}
+        <section className="py-24 bg-white relative">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
               <div>
-                <p className="text-violet-600 text-sm font-medium uppercase tracking-widest mb-4">Who We Are</p>
-                <h2 className="font-heading text-4xl sm:text-5xl text-zinc-900 mb-6 leading-tight">
+                <div className="section-label">Who We Are</div>
+                <h2 className="section-title mb-6">
                   {"Batangas' Voice for"}<br />
-                  <em>LGBTQIA+ Rights</em>
+                  <span className="gradient-text-luxury italic">LGBTQIA+ Rights</span>
                 </h2>
-                <p className="text-zinc-500 leading-relaxed mb-5">
-                  Founded in July 2015, LGBTQIA-SILBI Batangas City Inc. — the <em>Samahan ng Ikatlong Lahi ng Batangas</em> — has been the primary organization advocating for LGBTQIA+ rights, health, and welfare in Batangas City.
+                <p className="text-warm-gray-500 leading-relaxed mb-5">
+                  Founded in July 2015, LGBTQIA-SILBI Batangas City Inc. — the <em className="text-warm-gray-700">Samahan ng Ikatlong Lahi ng Batangas</em> — has been the primary organization advocating for LGBTQIA+ rights, health, and welfare in Batangas City.
                 </p>
-                <p className="text-zinc-500 leading-relaxed mb-8">
-                  Our work spans HIV prevention and testing, community outreach, livelihood programs, mental health support, and the fight for legislative protection — including the landmark Batangas City <strong className="text-zinc-900">Ordinance No. 12</strong>.
+                <p className="text-warm-gray-500 leading-relaxed mb-8">
+                  Our work spans HIV prevention and testing, community outreach, livelihood programs, mental health support, and the fight for legislative protection — including the landmark Batangas City <strong className="text-warm-gray-800">Ordinance No. 12</strong>.
                 </p>
                 <Link
                   href="/about"
-                  className="inline-flex items-center gap-2 px-6 py-3 border border-zinc-200 text-zinc-700 hover:border-violet-300 hover:text-violet-700 font-medium rounded-lg transition-all text-sm"
+                  className="btn-luxury-secondary text-base"
                 >
                   Learn Our Story <ArrowRight className="w-4 h-4" />
                 </Link>
               </div>
-              <div className="grid grid-cols-2 gap-4">
-                <div className="col-span-2 p-7 rounded-xl bg-violet-700 text-white">
-                  <div className="font-heading text-3xl mb-2">Ordinance No. 12</div>
-                  <div className="text-violet-200 text-sm leading-relaxed">Batangas City Anti-Discrimination Ordinance — a landmark victory for LGBTQIA+ rights in the province, protecting residents from discrimination in employment, housing, and public services.</div>
+              <div className="grid grid-cols-2 gap-5">
+                <div className="col-span-2 card-luxury-accent bg-gradient-to-br from-primary-700 to-primary-900 text-white">
+                  <div className="font-heading text-3xl mb-3">Ordinance No. 12</div>
+                  <div className="text-primary-100 text-sm leading-relaxed">Batangas City Anti-Discrimination Ordinance — a landmark victory for LGBTQIA+ rights in the province, protecting residents from discrimination in employment, housing, and public services.</div>
                 </div>
-                <div className="p-5 rounded-xl bg-violet-50 border border-violet-100">
-                  <Ribbon className="w-6 h-6 text-violet-600 mb-3" />
-                  <div className="font-semibold text-zinc-900 text-sm">HIV Advocacy</div>
-                  <div className="text-xs text-zinc-500 mt-1">Testing, counseling & prevention</div>
+                <div className="card-luxury bg-primary-50 border-primary-100">
+                  <div className="icon-wrap-luxury bg-white">
+                    <Ribbon className="w-5 h-5" />
+                  </div>
+                  <div className="font-semibold text-warm-gray-800 text-sm">HIV Advocacy</div>
+                  <div className="text-xs text-warm-gray-500 mt-1">Testing, counseling & prevention</div>
                 </div>
-                <div className="p-5 rounded-xl bg-violet-50 border border-violet-100">
-                  <Megaphone className="w-6 h-6 text-violet-600 mb-3" />
-                  <div className="font-semibold text-zinc-900 text-sm">Community Voice</div>
-                  <div className="text-xs text-zinc-500 mt-1">Rights protection & advocacy</div>
+                <div className="card-luxury bg-primary-50 border-primary-100">
+                  <div className="icon-wrap-luxury bg-white">
+                    <Megaphone className="w-5 h-5" />
+                  </div>
+                  <div className="font-semibold text-warm-gray-800 text-sm">Community Voice</div>
+                  <div className="text-xs text-warm-gray-500 mt-1">Rights protection & advocacy</div>
                 </div>
               </div>
             </div>
           </div>
         </section>
 
-        {/* Programs */}
-        <section className="py-20 bg-violet-50">
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="mb-12">
-              <p className="text-violet-600 text-sm font-medium uppercase tracking-widest mb-3">What We Do</p>
-              <h2 className="font-heading text-4xl sm:text-5xl text-zinc-900">Programs & Services</h2>
+        {/* Programs Section - Soft Lavender */}
+        <section className="py-24 bg-primary-50 relative overflow-hidden">
+          {/* Decorative elements */}
+          <div className="absolute top-0 left-0 w-96 h-96 bg-primary-200/20 rounded-full blur-3xl -translate-x-1/2 -translate-y-1/2" />
+          <div className="absolute bottom-0 right-0 w-96 h-96 bg-accent-light/15 rounded-full blur-3xl translate-x-1/2 translate-y-1/2" />
+
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
+            <div className="mb-14">
+              <div className="section-label">What We Do</div>
+              <h2 className="section-title">Programs & Services</h2>
+              <p className="section-subtitle">
+                Comprehensive support systems designed to uplift, protect, and celebrate our LGBTQIA+ community.
+              </p>
             </div>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-5">
-              {programs.map((program) => {
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+              {programs.map((program, index) => {
                 const Icon = program.icon
                 return (
                   <div
                     key={program.title}
-                    className="p-7 rounded-xl border border-violet-100 bg-white hover:border-violet-300 hover:-translate-y-0.5 hover:shadow-md transition-all duration-200"
+                    className="card-luxury group cursor-pointer"
+                    style={{ animationDelay: `${index * 0.1}s` }}
                   >
-                    <Icon className="w-6 h-6 text-violet-600 mb-4" />
-                    <h3 className="font-semibold text-zinc-900 text-lg mb-2">{program.title}</h3>
-                    <p className="text-zinc-500 text-sm leading-relaxed">{program.description}</p>
+                    <div className="icon-wrap-luxury">
+                      <Icon className="w-5 h-5" />
+                    </div>
+                    <h3 className="font-heading text-xl text-warm-gray-800 mb-3 group-hover:text-primary-700 transition-colors">
+                      {program.title}
+                    </h3>
+                    <p className="text-warm-gray-500 text-sm leading-relaxed">
+                      {program.description}
+                    </p>
                   </div>
                 )
               })}
             </div>
 
-            <div className="mt-8">
+            <div className="mt-10">
               <Link
                 href="/programs"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-violet-700 hover:bg-violet-600 text-white font-medium rounded-lg transition-all text-sm"
+                className="btn-luxury-primary text-base"
               >
                 View All Programs <ArrowRight className="w-4 h-4" />
               </Link>
@@ -209,54 +237,64 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Events */}
-        <section className="py-20 bg-white">
+        {/* Events Section - Clean White */}
+        <section className="py-24 bg-white">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-10 gap-4">
+            <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-12 gap-5">
               <div>
-                <p className="text-violet-600 text-sm font-medium uppercase tracking-widest mb-3">
-                  <CalendarDays className="w-4 h-4 inline mr-1" />Mark Your Calendar
-                </p>
-                <h2 className="font-heading text-4xl sm:text-5xl text-zinc-900">Upcoming Events</h2>
+                <div className="section-label">
+                  <CalendarDays className="w-4 h-4" />
+                  Mark Your Calendar
+                </div>
+                <h2 className="section-title">Upcoming Events</h2>
               </div>
-              <Link href="/events" className="text-sm text-violet-600 hover:text-violet-800 font-medium flex items-center gap-1">
-                All Events <ArrowRight className="w-4 h-4" />
+              <Link href="/events" className="text-base text-primary-600 hover:text-primary-800 font-medium flex items-center gap-2 transition-colors group">
+                All Events 
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </Link>
             </div>
 
-            <div className="divide-y divide-zinc-100">
+            <div className="space-y-3">
               {upcomingEvents.map((event) => (
-                <div key={event.title} className="group flex items-start gap-6 py-6 hover:bg-zinc-50 -mx-4 px-4 rounded-xl transition-colors">
-                  <div className="flex-shrink-0 w-14 text-center">
-                    <div className="text-xs font-semibold text-violet-600 uppercase tracking-widest">{event.month}</div>
-                    <div className="font-heading text-3xl text-zinc-900 leading-none mt-0.5">{event.day}</div>
+                <div key={event.title} className="group card-luxury py-6 px-6 flex items-start gap-6 hover:bg-primary-50/50 transition-colors">
+                  <div className="flex-shrink-0 w-16 text-center flex flex-col items-center justify-center">
+                    <div className="text-xs font-bold text-primary-600 uppercase tracking-widest">{event.month}</div>
+                    <div className="font-heading text-4xl text-warm-gray-800 leading-none mt-1">{event.day}</div>
                   </div>
                   <div className="flex-1 min-w-0">
-                    <div className="flex flex-wrap items-center gap-2 mb-1">
-                      <h3 className="font-semibold text-zinc-900">{event.title}</h3>
-                      <span className="text-xs px-2 py-0.5 rounded-full bg-violet-100 text-violet-700 font-medium">{event.tag}</span>
+                    <div className="flex flex-wrap items-center gap-3 mb-1.5">
+                      <h3 className="font-semibold text-warm-gray-800 text-lg group-hover:text-primary-700 transition-colors">
+                        {event.title}
+                      </h3>
+                      <span className="text-xs px-3 py-1 rounded-full bg-primary-100 text-primary-700 font-medium">
+                        {event.tag}
+                      </span>
                     </div>
-                    <p className="text-zinc-500 text-sm">{event.description}</p>
+                    <p className="text-warm-gray-500 text-sm">{event.description}</p>
                   </div>
-                  <ArrowRight className="w-4 h-4 text-zinc-300 group-hover:text-violet-500 flex-shrink-0 mt-1 transition-colors" />
+                  <ArrowRight className="w-5 h-5 text-warm-gray-300 group-hover:text-primary-500 flex-shrink-0 mt-1 transition-all group-hover:translate-x-1" />
                 </div>
               ))}
             </div>
           </div>
         </section>
 
-        {/* CTA */}
-        <section className="py-20 bg-violet-700 text-white">
-          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-            <h2 className="font-heading text-4xl sm:text-5xl mb-5">Be Part of the Community</h2>
-            <p className="text-violet-200 text-lg leading-relaxed mb-10 max-w-xl mx-auto">
+        {/* CTA Section - Luxury Dark */}
+        <section className="luxury-gradient-bg text-white py-28 relative overflow-hidden">
+          <div className="luxury-glow-orb luxury-glow-orb-1" />
+          <div className="luxury-glow-orb luxury-glow-orb-2" />
+          
+          <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative">
+            <h2 className="font-heading text-4xl sm:text-5xl mb-6">Be Part of the Community</h2>
+            <div className="divider-luxury" />
+            <p className="text-violet-200/70 text-lg leading-relaxed mb-12 max-w-xl mx-auto">
               Whether you need support, want to volunteer, or wish to partner with us — every act of solidarity makes our community stronger.
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-4">
-              <Link href="/contact" className="inline-flex items-center gap-2 px-8 py-4 bg-white text-violet-700 font-semibold rounded-lg hover:bg-zinc-100 transition-all text-sm">
+            <div className="flex flex-wrap items-center justify-center gap-5">
+              <Link href="/contact" className="btn-luxury-white text-base">
                 Reach Out to Us <ArrowRight className="w-4 h-4" />
               </Link>
-              <Link href="/programs" className="inline-flex items-center gap-2 px-8 py-4 border border-violet-500 text-white font-medium rounded-lg hover:bg-violet-600 transition-all text-sm">
+              <Link href="/programs" className="btn-luxury-outline-white text-base">
                 View Programs
               </Link>
             </div>
